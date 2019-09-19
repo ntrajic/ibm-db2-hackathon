@@ -1,0 +1,19 @@
+c:\SRC\docker\db2>docker images
+REPOSITORY                         TAG                      IMAGE ID            CREATED             VIRTUAL SIZE
+ibmcom/db2                         latest                   sha256:66a97        9 weeks ago         2.959 GB
+ibmcom/db2                         <none>                   sha256:66a97        9 weeks ago         2.959 GB
+
+
+
+c:\SRC\docker\db2>docker run -itd --name mydb2 --privileged=true -p 50000:50000 -e LICENSE=accept -e DB2INST1_PASSWORD=hackathon -e DBNAME=testdb -v db2:/database ibmcom/db2
+7cbf51ef2972ccd492a1e5883337a8b1ad0a6761b7dba8070878563842af3d8e
+
+c:\SRC\docker\db2>docker exec -ti mydb2 bash -c "su - db2inst1"
+[db2inst1@7cbf51ef2972 ~]$
+
+
+
+c:\SRC\docker\db2>docker images
+REPOSITORY                         TAG                      IMAGE ID            CREATED             VIRTUAL SIZE
+ibmcom/db2                         latest                   sha256:66a97        9 weeks ago         2.959 GB
+ibmcom/db2                         <none>                   sha256:66a97        9 weeks ago         2.959 GB
