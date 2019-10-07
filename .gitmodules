@@ -1,0 +1,3 @@
+[submodule "Db2-for-Web-Application/db2nodejs"]
+	path = Db2-for-Web-Application/db2nodejs
+	url = https://github.com/DB2-Samples/db2nodejs.git
